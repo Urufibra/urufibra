@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urufibra - Soluciones Integrales en Redes de Fibra Óptica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Estilo para el logo en el header */
+        .header-logo-img {
+            height: 50px; /* Ajusta la altura según sea necesario */
+            width: auto;
+        }
+
+        /* Estilos para la sección Hero */
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/0F172A/1E293B?text=Fondo+Abstracto+Digital');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-background-logo-container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            max-width: 550px;
+            opacity: 0.07;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-background-logo-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .hero-content-wrapper {
+            position: relative;
+            z-index: 2;
+            background-color: rgba(15, 23, 42, 0.75); 
+            border-radius: 0.75rem; 
+        }
+
+        /* Estilos para la sección Nosotros */
+        .nosotros-icon {
+            width: 60px; 
+            height: 60px;
+            margin-bottom: 1rem; 
+        }
+
+        /* Estilos para la sección Tecnología y Equipamiento */
+        .tech-logo {
+            height: 60px; /* Altura para los logos de las marcas de tecnología */
+            width: auto;  /* El ancho se ajustará manteniendo la proporción */
+            object-fit: contain; /* Asegura que el logo completo sea visible sin recortarse */
+            max-width: 150px; /* Ancho máximo para que no se deformen mucho */
+            margin: 0 auto 0.5rem auto; /* Centrar y margen inferior */
+            transition: transform 0.3s ease; /* Transición para el hover */
+        }
+        .tech-logo:hover {
+            transform: scale(1.1); /* Efecto de zoom ligero al pasar el mouse */
+        }
+        .tech-card {
+            border: 1px solid #e5e7eb; /* Tailwind gray-200 */
+            min-height: 150px; /* Altura mínima para las tarjetas */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centrar contenido verticalmente */
+            align-items: center; /* Centrar contenido horizontalmente */
+            background-color: #f9fafb; /* Un fondo muy claro para las tarjetas de logos */
+        }
+
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#">
+                <!-- IMPORTANTE: Cambia 'src' a la ruta de tu archivo de logo urufibra_srl_cover.jpg -->
+                <img src="urufibra_srl_cover.jpg" alt="Logo Urufibra" class="header-logo-img" onerror="this.src='https://placehold.co/150x50/000000/FFFFFF?text=URUFIBRA+LOGO&font=inter'; this.onerror=null;">
+            </a>
+            <nav class="space-x-4">
+                <a href="#servicios" class="text-gray-600 hover:text-blue-600">Servicios</a>
+                <a href="#tecnologia" class="text-gray-600 hover:text-blue-600">Tecnología</a>
+                <a href="#nosotros" class="text-gray-600 hover:text-blue-600">Nosotros</a>
+                <a href="#contacto" class="text-gray-600 hover:text-blue-600">Contacto</a>
+                <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Acceso Clientes</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section Rediseñada -->
+    <section class="hero-bg text-white py-24 md:py-40">
+        <div class="hero-background-logo-container" aria-hidden="true">
+             <!-- IMPORTANTE: Cambia 'src' a la ruta de tu archivo de logo urufibra_srl_cover.jpg para el fondo -->
+            <img src="urufibra_srl_cover.jpg" alt="Urufibra Logo Fondo" onerror="this.src='https://placehold.co/600x200/FFFFFF/FFFFFF?text=URUFIBRA&font=inter&fontsize=80'; this.onerror=null; this.style.opacity='0.07';">
+        </div>
+        <div class="container mx-auto px-6 text-center">
+            <div class="hero-content-wrapper max-w-3xl mx-auto p-8 md:p-12">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 tracking-tight">Soluciones Integrales en Redes de Fibra Óptica</h1>
+                <a href="#servicios" class="bg-blue-600 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-700 transition duration-300 text-lg md:text-xl shadow-lg hover:shadow-xl transform hover:scale-105">
+                    Conoce Nuestros Servicios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-700">Nuestros Servicios Especializados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1: Obras Civiles -->
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover transition-all duration-300 flex flex-col">
+                    <img src="https://placehold.co/100x100/3B82F6/FFFFFF?text=Icono+Obras" alt="Icono de Obras Civiles" class="mx-auto mb-6 rounded-full" onerror="this.src='https://placehold.co/100x100/cccccc/000000?text=Icono&font=inter'; this.onerror=null;">
+                    <h3 class="text-2xl font-semibold mb-4 text-center text-blue-600">Obras Civiles para Fibra Óptica</h3>
+                    <p class="text-gray-600 text-center flex-grow">Realizamos todas las obras civiles necesarias para el tendido y montaje de redes de fibra óptica, garantizando la calidad y durabilidad de la infraestructura.</p>
+                </div>
+                <!-- Servicio 2: Montaje de Redes -->
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover transition-all duration-300 flex flex-col">
+                    <img src="https://placehold.co/100x100/10B981/FFFFFF?text=Icono+Redes" alt="Icono de Montaje de Redes" class="mx-auto mb-6 rounded-full" onerror="this.src='https://placehold.co/100x100/cccccc/000000?text=Icono&font=inter'; this.onerror=null;">
+                    <h3 class="text-2xl font-semibold mb-4 text-center text-green-600">Montaje de Redes Aéreas y Subterráneas</h3>
+                    <p class="text-gray-600 text-center flex-grow">Expertos en el diseño e instalación de redes de fibra óptica, tanto aéreas como subterráneas, adaptándonos a las particularidades de cada proyecto.</p>
+                </div>
+                <!-- Servicio 3: Insuflado Neumático -->
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover transition-all duration-300 flex flex-col">
+                     <img src="https://placehold.co/100x100/F59E0B/FFFFFF?text=Icono+Insuflado" alt="Icono de Insuflado Neumático" class="mx-auto mb-6 rounded-full" onerror="this.src='https://placehold.co/100x100/cccccc/000000?text=Icono&font=inter'; this.onerror=null;">
+                    <h3 class="text-2xl font-semibold mb-4 text-center text-yellow-600">Insuflado Neumático Larga Distancia</h3>
+                    <p class="text-gray-600 text-center flex-grow">Utilizamos tecnología de insuflado neumático para el montaje eficiente de cables de fibra óptica en largas distancias, optimizando tiempos y costos.</p>
+                </div>
+                 <!-- Servicio 4: Empalmes de Fibra Óptica -->
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover transition-all duration-300 flex flex-col">
+                    <img src="https://placehold.co/100x100/8B5CF6/FFFFFF?text=Icono+Empalme" alt="Icono de Empalmes de Fibra Óptica" class="mx-auto mb-6 rounded-full" onerror="this.src='https://placehold.co/100x100/cccccc/000000?text=Icono&font=inter'; this.onerror=null;">
+                    <h3 class="text-2xl font-semibold mb-4 text-center text-purple-600">Empalmes de Fibra Óptica</h3>
+                    <p class="text-gray-600 text-center flex-grow">Servicio especializado de empalmes por fusión y mecánicos para asegurar la continuidad y el óptimo rendimiento de tus redes de fibra óptica.</p>
+                </div>
+                <!-- Servicio 5: Mediciones OTDR y PMD -->
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover transition-all duration-300 flex flex-col">
+                    <img src="https://placehold.co/100x100/EC4899/FFFFFF?text=Icono+OTDR%26PMD" alt="Icono de Mediciones OTDR y PMD" class="mx-auto mb-6 rounded-full" onerror="this.src='https://placehold.co/100x100/cccccc/000000?text=Icono&font=inter'; this.onerror=null;">
+                    <h3 class="text-2xl font-semibold mb-4 text-center text-pink-600">Mediciones OTDR y PMD</h3>
+                    <p class="text-gray-600 text-center flex-grow">Diagnóstico y certificación de enlaces de fibra óptica mediante mediciones OTDR y análisis de Dispersión Modal por Polarización (PMD). Identificamos y localizamos fallas con precisión para garantizar la calidad y el rendimiento de la red.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnología y Equipamiento Section (AHORA ANTES DE NOSOTROS) -->
+    <section id="tecnologia" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Tecnología y Equipamiento de Vanguardia</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    En Urufibra, invertimos en la mejor tecnología y equipamiento del mercado para garantizar la precisión, eficiencia y durabilidad de todas nuestras instalaciones y servicios de mantenimiento. Trabajamos con marcas líderes reconocidas mundialmente:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center max-w-4xl mx-auto">
+                <!-- Marca EXFO -->
+                <div class="text-center p-4 tech-card rounded-lg">
+                    <img src="https://logo.clearbit.com/exfo.com" alt="Logo EXFO" class="tech-logo" onerror="this.src='https://placehold.co/150x60/cccccc/000000?text=EXFO&font=inter'; this.onerror=null;">
+                    <p class="text-sm text-gray-500 mt-2">Equipos de prueba y medición</p>
+                </div>
+                <!-- Marca INNO -->
+                <div class="text-center p-4 tech-card rounded-lg">
+                    <!-- IMPORTANTE: Reemplaza 'images.png' con la ruta correcta a tu archivo de logo INNO -->
+                    <img src="images.png" alt="Logo INNO Instrument" class="tech-logo" onerror="this.src='https://placehold.co/150x60/cccccc/000000?text=INNO&font=inter'; this.onerror=null;">
+                     <p class="text-sm text-gray-500 mt-2">Fusionadoras y OTDRs</p>
+                </div>
+                <!-- Marca KosMAK -->
+                <div class="text-center p-4 tech-card rounded-lg">
+                     <!-- IMPORTANTE: Reemplaza 'images (1).png' con la ruta correcta a tu archivo de logo KosMAK -->
+                    <img src="images (1).png" alt="Logo KosMAK" class="tech-logo" onerror="this.src='https://placehold.co/150x60/cccccc/000000?text=KosMAK&font=inter'; this.onerror=null;">
+                     <p class="text-sm text-gray-500 mt-2">Máquinas de insuflado</p>
+                </div>
+                <!-- Marca FUJIKURA -->
+                <div class="text-center p-4 tech-card rounded-lg">
+                    <img src="https://logowik.com/content/uploads/images/fujikura4248.logowik.com.webp" alt="Logo FUJIKURA" class="tech-logo" onerror="this.src='https://placehold.co/150x60/cccccc/000000?text=FUJIKURA&font=inter'; this.onerror=null;">
+                     <p class="text-sm text-gray-500 mt-2">Empalmadoras y cortadoras</p>
+                </div>
+            </div>
+             <p class="text-center text-gray-500 mt-12 text-md">
+                Esta inversión en herramientas de alta gama nos permite ofrecer servicios de la más alta calidad, cumpliendo con los estándares más exigentes de la industria.
+            </p>
+        </div>
+    </section>
+
+    <!-- Nosotros Section Rediseñada (CONOCE URUFIBRA ABAJO) -->
+    <section id="nosotros" class="py-16 md:py-24 bg-slate-50"> 
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16"> {/* Añadido mb-16 para separar los pilares del texto que ahora va abajo */}
+                <!-- Pilar 1: Experiencia y Proyección -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center card-hover transition-all duration-300">
+                    <img src="https://placehold.co/60x60/3B82F6/FFFFFF?text=⚙️&font=notoemoji" alt="Icono de Experiencia" class="nosotros-icon mx-auto rounded-lg" onerror="this.src='https://placehold.co/60x60/cccccc/000000?text=Icono&font=inter'; this.onerror=null;">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-3">Experiencia y Proyección</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Nos esforzamos continuamente por liderar en el sector, con un portafolio de proyectos que demuestran nuestra capacidad y compromiso para enfrentar cualquier desafío en el despliegue de fibra óptica.
+                    </p>
+                </div>
+
+                <!-- Pilar 2: Calidad e Innovación -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center card-hover transition-all duration-300">
+                    <img src="https://placehold.co/60x60/10B981/FFFFFF?text=💡&font=notoemoji" alt="Icono de Calidad e Innovación" class="nosotros-icon mx-auto rounded-lg" onerror="this.src='https://placehold.co/60x60/cccccc/000000?text=Icono&font=inter'; this.onerror=null;">
+                    <h3 class="text-2xl font-semibold text-green-600 mb-3">Calidad e Innovación</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Implementamos las últimas tecnologías y los más altos estándares de calidad en cada fase del proyecto, asegurando soluciones robustas y de vanguardia.
+                    </p>
+                </div>
+
+                <!-- Pilar 3: Compromiso Total -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center card-hover transition-all duration-300">
+                    <img src="https://placehold.co/60x60/F59E0B/FFFFFF?text=🤝&font=notoemoji" alt="Icono de Compromiso" class="nosotros-icon mx-auto rounded-lg" onerror="this.src='https://placehold.co/60x60/cccccc/000000?text=Icono&font=inter'; this.onerror=null;">
+                    <h3 class="text-2xl font-semibold text-yellow-600 mb-3">Compromiso Total</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Tu satisfacción es nuestra prioridad. Trabajamos de cerca para entender tus necesidades y ofrecerte soluciones personalizadas, garantizando un servicio transparente y eficiente.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center"> {/* Contenedor para el título y párrafo que se movieron abajo */}
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Conoce Urufibra</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    En Urufibra, impulsamos la conectividad del futuro en Uruguay. Como especialistas en la construcción y mantenimiento de redes de fibra óptica de alto rendimiento, conectamos comunidades e impulsamos el progreso. La tecnología de vanguardia, la innovación constante y el compromiso de superar tus expectativas definen cada proyecto que emprendemos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-16 md:py-24 bg-gray-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-700">Contáctanos</h2>
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="nombre" class="block text-gray-700 font-medium mb-2">Nombre Completo</label>
+                            <input type="text" id="nombre" name="nombre" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Juan Pérez">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="juan.perez@example.com">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="asunto" class="block text-gray-700 font-medium mb-2">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Consulta sobre Mediciones OTDR y PMD">
+                    </div>
+                    <div class="mb-6">
+                        <label for="mensaje" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-700 transition duration-300">Enviar Mensaje</button>
+                    </div>
+                </form>
+                <div class="mt-12 text-center">
+                    <p class="text-gray-700 text-lg mb-2">También puedes encontrarnos en:</p>
+                    <p class="text-gray-600">Dirección: Ruta 11 km 107, Canelones</p>
+                    <p class="text-gray-600">Email: urufibra@urufibra.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Urufibra. Todos los derechos reservados.</p>
+            <p class="mt-2 text-sm text-gray-400">Diseñado con ❤️ por IA</p>
+        </div>
+    </footer>
+
+</body>
+</html>
